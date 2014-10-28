@@ -1,0 +1,18 @@
+.input-text {
+  height: 30px;
+  width: 160px;
+  font-size: 1em;
+}
+
+.btn {
+  height: 30px;
+  width: 60px;
+  background-color: #4889F0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.btn:hover {
+  background-color: #387DEB;
+}
