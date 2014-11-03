@@ -9,3 +9,7 @@
 - 第三周：
   - git 介绍
   - Web 开发入门
+  
+- 第四周：
+  - 虚拟机(Virtual Machine)
+  - Ubuntu初试
