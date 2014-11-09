@@ -1,0 +1,40 @@
+
+= Geeklub 讲座五：内存、数组与指针
+:author: 哆啦比猫/兰威举（cjxgm）
+:email: weiju@cjprods.org
+:date: 2014年11月9日
+
+== 讲座内容
+
+本次讲座主要注重基础（对指针、数组、尤其是内存的理解）
+
+* 大纲在 `outline` 文件中
+* 稿子在 `transcription` 文件中
+* 幻灯片视频位于 http://pan.baidu.com/s/1i3rE3Fv[百度盘]（密码 `ya8p` ）
+	和 http://v.youku.com/v_show/id_XODIzMjE4MTIw.html[优酷]
+
+
+== 开讲之前的补充
+
+上一次“虚拟机”讲座结尾处我提到“要装 B，用 qemu”
+启动虚拟机只需要：
+
+----
+qemu-system-x86_64 -cdrom haiku-r1alpha4.iso -vga vmware -enable-kvm -m 1G -cpu host -smp 3
+----
+
+解释：
+
+* `qemu-system-x86_64` ： `x86_64` 指的是我要模拟 64 位 x86 架构的计算机。
+	显然，qemu 可以模拟各种架构，如： `aarch64`, `or32`, `alpha`, `ppc`, `arm`, `ppc64`
+	`cris`, `ppcemb`, `i386`, `s390x`, `lm32`, `sh4`, `m68k`, `sh4eb`, `microblaze`, `sparc`
+	`microblazeel`, `sparc64`, `mips`, `unicore32`, `mips64`, `x86_64`, `mips64el`, `xtensa`
+	`mipsel`, `xtensaeb`, `moxie`, 不管是你听说过的还是没听过的架构都能模拟
+* `-cdrom haiku-r1alpha4.iso` ：使用光盘镜像 `haiku-r1alpha4.iso` ，
+	https://www.haiku-os.org/[haiku] 是一个比较奇特的操作系统，有兴趣的同学可以自行尝试
+* `-vga vmware` ：使用 VMWare 的虚拟显卡（性能好，兼容性也好）
+* `-enable-kvm` ：开启硬件加速/虚拟化（不然会很慢的）
+* `-m 1G` ：给虚拟机 1GB 内存
+* `-cpu host` ：模拟主机的 cpu （我的是 Intel i5）
+* `-smp 3` ：把三个核给虚拟机用（不然会很慢）
+
