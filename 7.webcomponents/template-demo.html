@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>template demo</title>
+  </head>
+  <body>
+    <template id="profileTemplate">
+      <style>
+        .profile__img {
+          width: 240px;
+          height: 240px;
+          border-radius: 120px;
+        }
+      </style>
+
+      <div class="profile">
+        <img src="" class="profile__img">
+        <div class="profile__name"></div>
+        <div class="profile__social"></div>
+      </div>
+    </template>
+
+    <script charset="utf-8">
+      var template = document.querySelector('#profileTemplate');
+      template.content.querySelector('.profile__img').src = 'http://img3.cache.netease.com/catchimg/20100630/82PQCNOT_9.jpg';
+      template.content.querySelector('.profile__name').textContent = 'Barack Obama';
+      template.content.querySelector('.profile__social').textContent = 'Follow me on Twitter';
+      // document.body.appendChild(template.content);
+
+      var clone = document.importNode(template.content, true);
+      document.body.appendChild(clone);
+    </script>
+  </body>
+</html>

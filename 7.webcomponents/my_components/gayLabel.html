@@ -1,0 +1,16 @@
+<script charset="utf-8">
+  var gayLabelProto = Object.create(HTMLElement.prototype);
+  gayLabelProto.createdCallback = function () {
+    this.style.display = 'block';
+    this.style.backgroundColor = 'blue';
+    this.style.color = 'white';
+    this.style.width = '160px';
+    this.style.padding = '2px';
+    this.style.textAlign = 'center';
+    this.style.borderRadius = '10px';
+
+    this.innerHTML = '<p>Fuck Black Gay</p>';
+  };
+
+  var GayLabel = document.registerElement('gay-label', {prototype: gayLabelProto});
+</script>
